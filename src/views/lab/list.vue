@@ -4,6 +4,7 @@
     <p>
       {{ msg }}
     </p>
+    <el-button @click="sendPost">post</el-button>
   </div>
 </template>
 
@@ -12,6 +13,14 @@ export default {
   data () {
     return {
       msg: 'message'
+    }
+  },
+  created () {
+
+  },
+  methods: {
+    sendPost () {
+      
     }
   }
 }
