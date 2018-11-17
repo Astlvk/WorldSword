@@ -35,6 +35,28 @@ _axios.interceptors.response.use(
   },
   function (error) {
     // Do something with response error
+    if (error && error.response) {
+      let info = error.response
+      console.log(info)
+      switch (error.response.status) {
+        case 400:
+
+          break
+        case 401:
+        case 403:
+
+          break
+        case 408:
+
+          break
+      }
+    } else {
+      if (error.message === 'Network Error') {
+
+      } else if (error.message.indexOf('timeout') > -1) {
+
+      }
+    }
     return Promise.reject(error)
   }
 )
