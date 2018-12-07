@@ -42,7 +42,10 @@ export default new Router({
         {
           path: 'list',
           name: 'labList',
-          component: () => import('./views/lab/vm/list')
+          components: {
+            default: () => import('./views/lab/vm/list'),
+            asideMenu: () => import('./views/lab/AsideMenu')
+          }
         }
       ]
     }
