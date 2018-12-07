@@ -29,7 +29,7 @@ export default new Router({
         {
           path: 'list',
           name: 'list',
-          component: () => import('./views/lab/list')
+          component: () => import('./views/lab/vm/list')
         }
       ]
     },
@@ -41,8 +41,8 @@ export default new Router({
       children: [
         {
           path: 'list',
-          name: 'list',
-          component: () => import('./views/lab/list')
+          name: 'labList',
+          component: () => import('./views/lab/vm/list')
         }
       ]
     }
