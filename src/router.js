@@ -32,6 +32,19 @@ export default new Router({
           component: () => import('./views/lab/list')
         }
       ]
+    },
+    {
+      path: '/lab',
+      redirect: 'lab/list',
+      name: 'lab',
+      component: () => import('./views/lab/index'),
+      children: [
+        {
+          path: 'list',
+          name: 'list',
+          component: () => import('./views/lab/list')
+        }
+      ]
     }
   ]
 })
