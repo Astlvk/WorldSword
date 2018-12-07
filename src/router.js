@@ -29,7 +29,7 @@ export default new Router({
         {
           path: 'list',
           name: 'list',
-          component: () => import('./views/lab/vm/list')
+          component: () => import('./views/lab/vm/List')
         }
       ]
     },
@@ -37,14 +37,14 @@ export default new Router({
       path: '/lab',
       redirect: 'lab/list',
       name: 'lab',
-      component: () => import('./views/lab/index'),
+      component: () => import('./views/lab/Index'),
       children: [
         {
           path: 'list',
           name: 'labList',
           components: {
-            default: () => import('./views/lab/vm/list'),
-            asideMenu: () => import('./views/lab/AsideMenu')
+            default: () => import('./views/lab/vm/List'),
+            asideMenu: () => import('./views/lab/IndexAsideMenu')
           }
         }
       ]
