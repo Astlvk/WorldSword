@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     sendPost () {
-      console.log('')
+      console.log('sora')
     }
   }
 }
